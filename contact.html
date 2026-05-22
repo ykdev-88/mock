@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="レンタルスペースゆうへのお問い合わせ。ご質問・ご予約のご相談など、お気軽にお問い合わせください。">
+  <title>お問い合わせ | レンタルスペースゆう</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+        <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M23 15 C27.8 13.2 31 15.2 32.5 19.8 C28.6 20.1 25.7 18.7 23 15Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="site-logo__name-jp">レンタルスペースゆう</span>
+        <span class="site-logo__name-en">Rental Space Yuu</span>
+      </a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul class="global-nav__list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="space.html">スペース紹介</a></li>
+          <li><a href="yomogi.html">よもぎ蒸し</a></li>
+          <li><a href="price.html">料金・予約</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--pill site-header__cta">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>予約する</span>
+      </a>
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="space.html">スペース紹介</a></li>
+      <li><a href="yomogi.html">よもぎ蒸し</a></li>
+      <li><a href="price.html">料金・予約</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html" aria-current="page">お問い合わせ</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">予約する</a>
+  </nav>
+
+  <main>
+    <section class="contact-hero">
+      <img class="decoration-leaf contact-hero__leaf contact-hero__leaf--left" src="assets/svg/leaf-deco-01.svg" alt="" aria-hidden="true">
+      <img class="decoration-leaf contact-hero__leaf contact-hero__leaf--right" src="assets/svg/leaf-deco-02.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <div class="section-heading">
+          <h1 class="section-heading__jp">お問い合わせ</h1>
+          <p class="section-heading__en">Contact</p>
+          <div class="section-heading__divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <img class="divider-leaf" src="assets/svg/leaf-sprig.svg" alt="">
+            <span class="divider-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-main">
+      <div class="container contact-main__grid">
+        <section class="contact-form-card" aria-labelledby="contact-form-title">
+          <div class="contact-form-card__head">
+            <h2 id="contact-form-title">お問い合わせありがとうございます</h2>
+            <p>ご質問・ご予約のご相談など、どんなことでもお気軽にお問い合わせください。<br>内容を確認のうえ、担当より折り返しご連絡いたします。</p>
+          </div>
+          <form class="contact-form" data-contact-form>
+            <div class="form-row contact-form__row">
+              <label class="form-label" for="name">お名前 <span class="form-required">必須</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="例）山田 花子" required>
+            </div>
+            <div class="form-row contact-form__row">
+              <label class="form-label" for="email">メールアドレス <span class="form-required">必須</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="例）yamada@example.com" required>
+            </div>
+            <div class="form-row contact-form__row">
+              <label class="form-label" for="tel">電話番号 <span class="form-required">必須</span></label>
+              <input class="form-input" type="tel" id="tel" name="tel" placeholder="例）090-1234-5678（ハイフンあり）" required>
+            </div>
+            <div class="form-row contact-form__row">
+              <label class="form-label" for="type">お問い合わせ種別 <span class="form-required">必須</span></label>
+              <select class="form-select" id="type" name="type" required>
+                <option value="">選択してください</option>
+                <option>セミナールームについて</option>
+                <option>よもぎ蒸しについて</option>
+                <option>料金・予約について</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div class="form-row contact-form__row">
+              <label class="form-label" for="message">ご希望内容 <span class="form-required">必須</span></label>
+              <textarea class="form-textarea" id="message" name="message" rows="5" placeholder="ご利用希望日や用途、ご質問などご自由にご記入ください。" required></textarea>
+            </div>
+            <label class="contact-form__privacy">
+              <input type="checkbox" required>
+              <span>プライバシーポリシーに同意のうえ、送信します。</span>
+            </label>
+            <button type="submit" class="btn btn--primary btn--lg contact-form__submit">送信する</button>
+          </form>
+        </section>
+
+        <aside class="contact-reserve-card">
+          <h2>ご予約をご希望の方へ</h2>
+          <p>ご予約は、Googleフォームから24時間受け付けております。<br>以下のQRコードよりフォームにアクセスしてください。</p>
+          <div class="contact-qr-area">
+            <div class="price-qr-placeholder" aria-label="ご予約フォームのQRコードダミー">QRコード<br>（ダミー）</div>
+            <p>ご予約フォーム<br>（Googleフォーム）</p>
+            <a href="#" class="btn btn--ghost btn--sm">QRコードを読み取る</a>
+          </div>
+          <div class="contact-info-block">
+            <h3>お電話でのお問い合わせ</h3>
+            <a href="tel:08012345678" class="contact-phone">080-1234-5678</a>
+            <p>受付時間　9:00〜20:00（不定休）</p>
+          </div>
+          <div class="contact-info-block">
+            <h3>ご確認ください</h3>
+            <ul>
+              <li>ご返信は通常、1〜2営業日以内にご連絡いたします。</li>
+              <li>迷惑メール設定をされている方は、@example.com からのメールを受信できるようご設定ください。</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact-bottom-cta">
+      <div class="container contact-bottom-cta__inner">
+        <div>
+          <span>すぐに予約のしたい方はこちら</span>
+          <h2>空き状況の確認・ご予約は 24時間いつでも可能です</h2>
+          <p>イベント・会議・撮影・レッスンなど、さまざまな用途でご利用いただけます。</p>
+        </div>
+        <a href="price.html" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>ご予約はこちら</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+          <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <span class="site-logo__name-jp">レンタルスペースゆう</span>
+          <span class="site-logo__name-en">Rental Space Yuu</span>
+        </a>
+        <p class="site-footer__tagline">心地よい時間を、あなたのスタイルで。</p>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2025 レンタルスペースゆう All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

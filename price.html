@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="レンタルスペースゆうの料金・予約ページ。セミナールームとよもぎ蒸しの料金、予約の流れ、空き状況カレンダーをご案内します。">
+  <title>料金・予約 | レンタルスペースゆう</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+        <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M23 15 C27.8 13.2 31 15.2 32.5 19.8 C28.6 20.1 25.7 18.7 23 15Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="site-logo__name-jp">レンタルスペースゆう</span>
+        <span class="site-logo__name-en">Rental Space Yuu</span>
+      </a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul class="global-nav__list">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="space.html">スペース紹介</a></li>
+          <li><a href="yomogi.html">よもぎ蒸し</a></li>
+          <li><a href="price.html" aria-current="page">料金・予約</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--pill site-header__cta">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>予約する</span>
+      </a>
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="space.html">スペース紹介</a></li>
+      <li><a href="yomogi.html">よもぎ蒸し</a></li>
+      <li><a href="price.html" aria-current="page">料金・予約</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">予約する</a>
+  </nav>
+
+  <main>
+    <section class="price-hero">
+      <img class="decoration-leaf price-hero__leaf price-hero__leaf--left" src="assets/svg/leaf-deco-01.svg" alt="" aria-hidden="true">
+      <img class="decoration-leaf price-hero__leaf price-hero__leaf--right" src="assets/svg/leaf-deco-02.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <div class="section-heading">
+          <h1 class="section-heading__jp">料金・予約</h1>
+          <p class="section-heading__en">Price & Reservation</p>
+          <div class="section-heading__divider" aria-hidden="true">
+            <span class="divider-line"></span>
+            <img class="divider-leaf" src="assets/svg/leaf-sprig.svg" alt="">
+            <span class="divider-line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="var(--color-bg-base)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="price-plans">
+      <div class="container price-plan-grid">
+        <article class="price-plan-card price-plan-card--space">
+          <span class="price-plan-card__badge">セミナールーム</span>
+          <p class="price-plan-card__lead">セミナー・講座・会議・ワークショップ・撮影などに</p>
+          <p class="price-plan-card__main">1時間 <strong>¥1,100〜</strong></p>
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>時間帯</th>
+                  <th>基本料金（1時間あたり）</th>
+                  <th>延長料金（30分あたり）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>平日 9:00〜18:00</td><td>¥1,100</td><td>¥550</td></tr>
+                <tr><td>平日 18:00〜21:00</td><td>¥1,430</td><td>¥715</td></tr>
+                <tr><td>土日祝 9:00〜21:00</td><td>¥1,540</td><td>¥770</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-plan-card__note">※ご利用は1時間から、30分単位で延長できます。</p>
+          <ul class="price-option-list">
+            <li>プロジェクター・スクリーン ¥550/回</li>
+            <li>ホワイトボード ¥330/回</li>
+            <li>スピーカー（Bluetooth）¥330/回</li>
+            <li>延長（30分単位）¥550〜</li>
+          </ul>
+          <p class="price-plan-card__note">※すべて税込価格です。※準備・片付けの時間もご予約時間内に含まれます。</p>
+        </article>
+
+        <article class="price-plan-card price-plan-card--yomogi">
+          <span class="price-plan-card__badge">よもぎ蒸し</span>
+          <p class="price-plan-card__lead">ハーブの香りに包まれる癒しの時間</p>
+          <div class="price-yomogi-icon" aria-hidden="true">♨</div>
+          <dl class="price-yomogi-list">
+            <div>
+              <dt>よもぎ蒸し（1名様・60分）</dt>
+              <dd>¥3,300 <span>（税込）</span></dd>
+            </div>
+            <div>
+              <dt>ペア割（2名様・各60分）</dt>
+              <dd>¥6,000 <span>（税込）</span></dd>
+            </div>
+          </dl>
+          <p class="price-yomogi-option">オプション：ハーブ追加　¥550 / 回</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="price-reservation">
+      <div class="container price-reservation__grid">
+        <section class="price-flow card" aria-labelledby="price-flow-title">
+          <div class="home-section-label">
+            <p>FLOW</p>
+            <h2 id="price-flow-title">ご予約の流れ</h2>
+          </div>
+          <ol class="price-flow-list">
+            <li><span>STEP 1</span><strong>日付を選択</strong><small>カレンダーからご希望の日付を選択</small></li>
+            <li><span>STEP 2</span><strong>時間を選択</strong><small>空いている時間帯からご希望の時間を選択</small></li>
+            <li><span>STEP 3</span><strong>必要事項を入力</strong><small>Googleフォームにて必要事項を入力</small></li>
+            <li><span>STEP 4</span><strong>予約完了のご連絡</strong><small>確認後、メールでご連絡いたします</small></li>
+          </ol>
+        </section>
+
+        <section class="price-calendar card" aria-labelledby="calendar-title">
+          <div class="price-calendar__head">
+            <div>
+              <p class="home-eyebrow">CALENDAR</p>
+              <h2 id="calendar-title">空き状況カレンダー</h2>
+            </div>
+            <div class="price-calendar__tabs" aria-label="カレンダー表示切替">
+              <button type="button">今日</button>
+              <button type="button" class="is-active">月</button>
+              <button type="button">週</button>
+              <button type="button">日</button>
+            </div>
+          </div>
+          <p class="price-calendar__legend">○ 空きあり　△ 残りわずか　× 空きなし</p>
+          <table class="calendar-table" aria-label="空き状況カレンダー">
+            <thead>
+              <tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="is-muted">27</td><td class="is-muted">28</td><td class="is-muted">29</td><td class="is-muted">30</td><td>1<br><span>○</span></td><td>2<br><span>○</span></td><td>3<br><span>×</span></td></tr>
+              <tr><td>4<br><span>×</span></td><td>5<br><span>○</span></td><td>6<br><span>○</span></td><td>7<br><span>○</span></td><td>8<br><span>△</span></td><td>9<br><span>△</span></td><td>10<br><span>△</span></td></tr>
+              <tr><td>11<br><span>○</span></td><td>12<br><span>○</span></td><td>13<br><span>○</span></td><td>14<br><span>○</span></td><td>15<br><span>△</span></td><td>16<br><span>△</span></td><td>17<br><span>△</span></td></tr>
+              <tr><td>18<br><span>○</span></td><td>19<br><span>○</span></td><td>20<br><span>△</span></td><td>21<br><span>○</span></td><td>22<br><span>○</span></td><td>23<br><span>○</span></td><td>24<br><span>○</span></td></tr>
+              <tr><td>25<br><span>△</span></td><td>26<br><span>△</span></td><td>27<br><span>△</span></td><td>28<br><span>△</span></td><td>29<br><span>○</span></td><td>30<br><span>○</span></td><td>31<br><span>○</span></td></tr>
+            </tbody>
+          </table>
+          <a href="#" class="price-calendar__link">Googleカレンダーで確認 →</a>
+        </section>
+      </div>
+    </section>
+
+    <section class="price-booking-info">
+      <div class="container price-booking-info__grid">
+        <article class="price-qr-card">
+          <div>
+            <p class="home-eyebrow">RESERVATION</p>
+            <h2>現在の予約方法</h2>
+            <h3>QRコードからGoogleフォームへ</h3>
+            <p>右のQRコードを読み取り、必要事項を入力して送信してください。確認後、こちらからご連絡いたします。</p>
+            <a href="#price-notes">▶ ご予約前に必ず注意事項をご確認ください</a>
+          </div>
+          <div class="price-qr-placeholder" aria-label="QRコードのダミー">QRコード<br>（ダミー）</div>
+        </article>
+
+        <article class="price-notes-card" id="price-notes">
+          <h2>注意事項・キャンセルポリシー</h2>
+          <ul>
+            <li>ご予約のキャンセルは、利用日の3日前までにご連絡ください。</li>
+            <li>2日前〜前日のキャンセル：利用料金の50%</li>
+            <li>当日キャンセル／無断キャンセル：利用料金の100%</li>
+            <li>ご利用時間には、準備・片付けの時間も含まれます。</li>
+            <li>室内は禁煙です。ゴミはお持ち帰りをお願いいたします。</li>
+            <li>備品の破損・汚損があった場合は、実費をご請求する場合がございます。</li>
+          </ul>
+        </article>
+
+        <div class="price-large-actions">
+          <a href="contact.html" class="btn btn--primary btn--lg">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span>予約する</span>
+          </a>
+          <a href="contact.html" class="btn btn--gold btn--lg">
+            <span>お問い合わせ</span>
+          </a>
+          <p>ご不明な点があれば、お気軽にお問い合わせください。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+          <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <span class="site-logo__name-jp">レンタルスペースゆう</span>
+          <span class="site-logo__name-en">Rental Space Yuu</span>
+        </a>
+        <p class="site-footer__tagline">心地よい時間を、あなたのスタイルで。</p>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2025 レンタルスペースゆう All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

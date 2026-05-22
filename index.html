@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="レンタルスペースゆうは、セミナールームとよもぎ蒸しを備えた、心身を整える学びと癒しのレンタルスペースです。">
+  <title>レンタルスペースゆう | 心身を整える学びの場</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+        <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M23 15 C27.8 13.2 31 15.2 32.5 19.8 C28.6 20.1 25.7 18.7 23 15Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="site-logo__name-jp">レンタルスペースゆう</span>
+        <span class="site-logo__name-en">Rental Space Yuu</span>
+      </a>
+
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul class="global-nav__list">
+          <li><a href="index.html" aria-current="page">ホーム</a></li>
+          <li><a href="space.html">スペース紹介</a></li>
+          <li><a href="yomogi.html">よもぎ蒸し</a></li>
+          <li><a href="price.html">料金・予約</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary btn--pill site-header__cta">
+        <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>予約する</span>
+      </a>
+
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" aria-current="page">ホーム</a></li>
+      <li><a href="space.html">スペース紹介</a></li>
+      <li><a href="yomogi.html">よもぎ蒸し</a></li>
+      <li><a href="price.html">料金・予約</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary mobile-nav__cta">予約する</a>
+  </nav>
+
+  <main>
+    <section class="home-hero">
+      <div class="home-hero__bg" role="img" aria-label="明るいセミナールームのイメージ写真"></div>
+      <img class="decoration-leaf home-hero__leaf home-hero__leaf--left" src="assets/svg/leaf-deco-01.svg" alt="" aria-hidden="true">
+      <img class="decoration-leaf home-hero__leaf home-hero__leaf--right" src="assets/svg/leaf-deco-02.svg" alt="" aria-hidden="true">
+      <div class="home-hero__inner">
+        <div class="home-hero__content">
+          <h1 class="home-hero__title">心身を整える<br>学びの場を、ここに。</h1>
+          <p class="home-hero__lead">落ち着いた空間で、自分らしく学び、つながる時間を。<br>レンタルスペースゆうは、あなたの想いをそっと支えます。</p>
+          <div class="home-hero__actions">
+            <a href="space.html" class="btn btn--white">
+              <span>スペースを見る</span>
+            </a>
+            <a href="contact.html" class="btn btn--primary">
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <span>予約する</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,38 C240,76 480,10 720,42 C960,76 1200,6 1440,38 L1440,80 L0,80 Z" fill="var(--color-bg-base)"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="home-concept section">
+      <img class="decoration-leaf decoration-leaf--left" src="assets/svg/leaf-deco-01.svg" alt="" aria-hidden="true">
+      <img class="decoration-leaf decoration-leaf--right" src="assets/svg/leaf-deco-02.svg" alt="" aria-hidden="true">
+      <div class="container">
+        <div class="home-concept__heading">
+          <p class="home-eyebrow">CONCEPT</p>
+          <h2>心地よさと機能性を兼ね備えた、あなただけの特別な時間を。</h2>
+        </div>
+        <div class="home-feature-grid">
+          <article class="feature-card home-feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM21 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM5 25v-2a6 6 0 0 1 12 0v2M15 25v-2a6 6 0 0 1 12 0v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">広さ・収容人数</h3>
+            <p class="feature-card__text">ゆったりとした空間で、少人数から最大30名程度までご利用いただけます。</p>
+          </article>
+          <article class="feature-card home-feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M10 19h13a3 3 0 0 0 0-6H12a4 4 0 0 0-4 4v8M10 19v6M24 19v6M7 25h20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">設備充実</h3>
+            <p class="feature-card__text">Wi-Fi・プロジェクター・ホワイトボードなど学びや活動をサポートする設備を完備。</p>
+          </article>
+          <article class="feature-card home-feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M16 28 C14 19 17 10 25 4M16.5 17 C10 14.5 6.2 17 4.5 23 C10 23.2 13.6 21.5 16.5 17ZM19 12 C23.8 9.8 27.3 11.4 29 16.5 C24.7 16.8 21.7 15.4 19 12Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">コンセプト特化</h3>
+            <p class="feature-card__text">心と体を整え、学びや癒しに集中できる "隠れ家サロン" のような空間です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-main-panels">
+      <div class="container home-main-panels__grid">
+        <section class="home-service" aria-labelledby="service-title">
+          <div class="home-section-label">
+            <p>SERVICE</p>
+            <h2 id="service-title">サービス紹介</h2>
+          </div>
+          <div class="home-service__grid">
+            <article class="card image-card home-service-card">
+              <img class="image-card__image" src="https://placehold.co/640x420/F5EFE2/7A7A7A?text=Seminar+Room" alt="セミナールームの写真プレースホルダー">
+              <div class="image-card__body">
+                <h3 class="card__title">セミナールーム</h3>
+                <p class="card__text">セミナー・講座・ワークショップ・打ち合わせなど多目的にご利用いただけます。</p>
+                <a href="space.html" class="btn btn--ghost btn--sm">詳しく見る</a>
+              </div>
+            </article>
+            <article class="card image-card home-service-card">
+              <img class="image-card__image" src="https://placehold.co/640x420/E8F1F0/7A7A7A?text=Yomogi+Steam" alt="よもぎ蒸しの写真プレースホルダー">
+              <div class="image-card__body">
+                <h3 class="card__title">よもぎ蒸し</h3>
+                <p class="card__text">国産よもぎを使用したよもぎ蒸しで、心も体もぽかぽかに。</p>
+                <a href="yomogi.html" class="btn btn--ghost btn--sm">詳しく見る</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-scene" aria-labelledby="scene-title">
+          <div class="home-section-label">
+            <p>SCENE</p>
+            <h2 id="scene-title">こんなシーンにおすすめ</h2>
+          </div>
+          <div class="home-scene__content">
+            <div class="home-scene__labels" aria-label="おすすめの利用シーン">
+              <span>セミナー・講座</span>
+              <span>ワークショップ</span>
+              <span>ヨガ・ピラティス</span>
+              <span>カウンセリング</span>
+              <span>勉強会・読書会</span>
+              <span>撮影・配信</span>
+              <span>よもぎ蒸し・温活</span>
+              <span>サロン・施術</span>
+            </div>
+            <aside class="home-price-card" aria-labelledby="price-card-title">
+              <img class="home-price-card__leaf" src="assets/svg/leaf-deco-corner-01.svg" alt="" aria-hidden="true">
+              <p class="home-eyebrow">PRICE</p>
+              <h3 id="price-card-title">料金の目安</h3>
+              <p class="home-price-card__price">1時間 <strong>¥1,100〜</strong></p>
+              <p class="home-price-card__text">ご利用時間や用途に合わせたプランをご用意しております。</p>
+              <a href="price.html" class="btn btn--ghost btn--sm">料金・予約を見る</a>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="home-access">
+      <div class="container home-access__grid">
+        <div class="home-access__info">
+          <div class="home-section-label">
+            <p>ACCESS</p>
+            <h2>アクセス</h2>
+          </div>
+          <address>
+            東京都〇〇区〇〇町1-2-3<br>
+            〇〇駅 徒歩5分<br>
+            ※詳しい住所はご予約後にご案内します。
+          </address>
+        </div>
+        <div class="home-access__map" role="img" aria-label="アクセスマップのプレースホルダー">
+          <span class="home-access__pin">レンタルスペースゆう</span>
+          <span class="home-access__station">〇〇駅</span>
+        </div>
+        <div class="home-access__guide">
+          <ul>
+            <li>電車：〇〇駅 徒歩5分</li>
+            <li>車：近隣にコインパーキングあり</li>
+            <li>自転車：駐輪スペースあり</li>
+          </ul>
+          <a href="access.html" class="btn btn--ghost btn--sm">アクセス詳細を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-final-cta">
+      <img class="decoration-leaf home-final-cta__leaf home-final-cta__leaf--left" src="assets/svg/leaf-deco-01.svg" alt="" aria-hidden="true">
+      <img class="decoration-leaf home-final-cta__leaf home-final-cta__leaf--right" src="assets/svg/leaf-deco-02.svg" alt="" aria-hidden="true">
+      <div class="container home-final-cta__inner">
+        <h2>あなたの『やってみたい』を叶える場所。<br>まずはお気軽にご予約ください。</h2>
+        <a href="contact.html" class="btn btn--white btn--lg">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3v3M17 3v3M4.5 9.5h15M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>予約する</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--compact">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="site-logo" aria-label="レンタルスペースゆう ホーム">
+          <svg class="site-logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M20 30 C18 22 21 14 28 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M20.5 20 C14.8 17.8 11.2 20 9.5 25 C14 25.5 17.4 24 20.5 20Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <span class="site-logo__name-jp">レンタルスペースゆう</span>
+          <span class="site-logo__name-en">Rental Space Yuu</span>
+        </a>
+        <p class="site-footer__tagline">心地よい時間を、あなたのスタイルで。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <div>
+          <h2 class="site-footer__group-title">ナビゲーション</h2>
+          <ul class="site-footer__list">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="space.html">スペースについて</a></li>
+            <li><a href="price.html">ご利用料金</a></li>
+            <li><a href="faq.html">よくあるご質問</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="site-footer__bottom">
+        <p>© 2025 レンタルスペースゆう All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
