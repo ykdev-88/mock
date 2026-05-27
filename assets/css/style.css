@@ -1283,6 +1283,19 @@ table {
   text-align: center;
 }
 
+.section--brand-story .section-heading__divider {
+  width: min(520px, 86vw);
+  margin-top: var(--space-5);
+  gap: var(--space-4);
+}
+
+.brand-story-divider-image {
+  display: block;
+  width: clamp(140px, 24vw, 260px);
+  max-height: 160px;
+  object-fit: contain;
+}
+
 .brand-story-grid {
   display: grid;
   gap: var(--space-6);
