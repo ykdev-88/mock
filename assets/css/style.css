@@ -362,6 +362,18 @@ table {
   opacity: 0.82;
 }
 
+.site-header .site-logo--image {
+  display: inline-flex;
+  align-items: center;
+  max-width: min(48vw, 320px);
+}
+
+.site-logo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .site-logo__mark {
   grid-area: mark;
   width: 40px;
@@ -840,6 +852,15 @@ table {
   text-align: center;
 }
 
+.site-footer--compact .site-logo {
+  margin-inline: auto;
+}
+
+.site-footer--compact .site-footer__tagline {
+  max-width: 520px;
+  margin-inline: auto;
+}
+
 .site-footer--compact .site-footer__nav {
   display: none;
 }
@@ -1145,6 +1166,19 @@ table {
 
   .site-footer__bottom {
     grid-column: 1 / -1;
+  }
+
+  .site-footer--compact .site-footer__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0;
+    text-align: center;
+  }
+
+  .site-footer--compact .site-footer__brand,
+  .site-footer--compact .site-footer__bottom {
+    width: 100%;
   }
 
   .step-list {
