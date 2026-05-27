@@ -14,7 +14,7 @@
 ## 主要ページ
 
 - [ホーム](https://example.com/): ゆうダイモニア名古屋西店の概要、ブランドストーリー、提供サービスの紹介
-- [料金・予約](https://example.com/price.html): 各サービスの料金プラン、ご予約の流れ、空き状況カレンダー
+- [料金・予約](https://example.com/price.html): 各サービスの料金プラン、ご予約の流れ、注意事項
 - [よくある質問](https://example.com/faq.html): 予約方法、設備、キャンセルポリシー、利用条件などのQ&A
 - [アクセス](https://example.com/access.html): 所在地（〒451-0043 名古屋市西区新道1丁目2-9）、最寄り駅は地下鉄鶴舞線「浅間町」駅徒歩約6分、駐車は近隣コインパーキング利用
 - [お問い合わせ](https://example.com/contact.html): フォーム・電話・予約QRコードでのお問い合わせ窓口

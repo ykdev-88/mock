@@ -1971,6 +1971,7 @@ table {
 .space-icon-grid li {
   display: grid;
   place-items: center;
+  gap: var(--space-1);
   min-height: 74px;
   padding: var(--space-3);
   color: var(--color-text-heading);
@@ -1979,7 +1980,15 @@ table {
   border-radius: var(--radius-lg);
   font-size: var(--font-size-sm);
   font-weight: 500;
+  line-height: var(--leading-snug);
   text-align: center;
+}
+
+.space-icon-grid li small {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
 }
 
 .space-note {
@@ -2779,13 +2788,11 @@ table {
   text-align: center;
 }
 
-.price-reservation__grid {
-  display: grid;
-  gap: var(--space-6);
+.price-reservation {
+  padding-bottom: 0;
 }
 
-.price-flow,
-.price-calendar {
+.price-flow {
   border: 1px solid var(--color-border-light);
 }
 
@@ -2821,89 +2828,8 @@ table {
   line-height: var(--leading-normal);
 }
 
-.price-calendar__head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.price-calendar__head h2 {
-  font-family: var(--font-sans-jp);
-  font-size: var(--font-size-lg);
-}
-
-.price-calendar__tabs {
-  display: inline-flex;
-  align-self: start;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.price-calendar__tabs button {
-  min-width: 44px;
-  padding: var(--space-2) var(--space-3);
-  color: var(--color-text-muted);
-  background-color: var(--color-bg-white);
-  border-right: 1px solid var(--color-border-light);
-  font-size: var(--font-size-xs);
-}
-
-.price-calendar__tabs button:last-child {
-  border-right: 0;
-}
-
-.price-calendar__tabs .is-active {
-  color: var(--color-text-on-primary);
-  background-color: var(--color-primary);
-}
-
-.price-calendar__legend {
-  margin-top: var(--space-3);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
-}
-
-.calendar-table {
-  width: 100%;
-  margin-top: var(--space-4);
-  table-layout: fixed;
-  font-size: var(--font-size-xs);
-}
-
-.calendar-table th,
-.calendar-table td {
-  padding: var(--space-2);
-  border: 1px solid var(--color-border-light);
-  text-align: center;
-}
-
-.calendar-table th {
-  color: var(--color-text-heading);
-  background-color: var(--color-bg-cream);
-}
-
-.calendar-table td {
-  color: var(--color-text-muted);
-  background-color: var(--color-bg-white);
-}
-
-.calendar-table span {
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.calendar-table .is-muted {
-  color: var(--color-text-light);
-  background-color: var(--color-bg-soft);
-}
-
-.price-calendar__link {
-  display: inline-flex;
-  margin-top: var(--space-3);
-  color: var(--color-primary);
-  font-size: var(--font-size-sm);
+.price-booking-info {
+  padding-top: var(--space-6);
 }
 
 .price-booking-info__grid {
@@ -3031,10 +2957,6 @@ table {
 }
 
 @media (min-width: 1024px) {
-  .price-reservation__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
-  }
-
   .price-booking-info__grid {
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.8fr) minmax(280px, 0.7fr);
     align-items: stretch;
@@ -3044,14 +2966,6 @@ table {
 @media (max-width: 767px) {
   .price-option-list {
     grid-template-columns: 1fr;
-  }
-
-  .price-calendar {
-    overflow-x: auto;
-  }
-
-  .calendar-table {
-    min-width: 560px;
   }
 }
 
@@ -3725,12 +3639,23 @@ table {
   align-items: center;
 }
 
-.about-owner-photo {
+.about-owner-logo {
   width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  object-fit: contain;
+  padding: var(--space-6);
+  background-color: var(--color-bg-white);
   border-radius: var(--radius-3xl);
   box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .about-owner-logo {
+    max-width: none;
+    margin-inline: 0;
+  }
 }
 
 .about-intro__text h2 {
@@ -3989,14 +3914,23 @@ table {
   border-radius: var(--radius-3xl);
 }
 
-.about-cta h2 {
+.about-cta__title {
   color: var(--color-primary-dark);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 3.2vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.55;
+  line-break: strict;
+  word-break: keep-all;
+}
+
+.about-cta__title-line {
+  display: inline-block;
 }
 
 .about-cta p {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
   color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
 }
 
 @media (min-width: 768px) {
@@ -4039,11 +3973,28 @@ table {
   }
 
   .about-cta__inner {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-8);
+    text-align: left;
+  }
+
+  .about-cta__title-line {
+    white-space: nowrap;
   }
 
   .about-cta .btn {
     width: auto;
     min-width: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-cta__inner {
+    text-align: center;
+  }
+
+  .about-cta__title {
+    font-size: clamp(1.125rem, 4.5vw, 1.5rem);
+    letter-spacing: 0.02em;
   }
 }
