@@ -381,6 +381,10 @@ table {
   color: var(--color-primary);
 }
 
+.site-logo__mark--image {
+  object-fit: contain;
+}
+
 .site-logo__name-jp {
   grid-area: jp;
   font-family: var(--font-serif-jp);
@@ -1234,7 +1238,7 @@ table {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(250, 246, 239, 0.98) 0%, rgba(250, 246, 239, 0.78) 32%, rgba(250, 246, 239, 0.18) 66%),
-    url("https://placehold.co/1920x900/F5EFE2/8A8174?text=Seminar+Room") center / cover;
+    url("../images/home-hero-wellness-bg.jpg") center / cover;
 }
 
 .home-hero__inner {
