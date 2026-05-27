@@ -3100,87 +3100,17 @@ table {
   position: relative;
   min-height: 360px;
   overflow: hidden;
-  background:
-    linear-gradient(30deg, rgba(255, 255, 255, 0.12), rgba(91, 175, 168, 0.13)),
-    repeating-linear-gradient(18deg, transparent 0 44px, rgba(229, 223, 211, 0.95) 45px 48px),
-    repeating-linear-gradient(105deg, transparent 0 52px, rgba(229, 223, 211, 0.85) 53px 56px),
-    radial-gradient(circle at 28% 22%, rgba(143, 196, 191, 0.24) 0 7%, transparent 8%),
-    radial-gradient(circle at 82% 36%, rgba(201, 169, 97, 0.15) 0 8%, transparent 9%),
-    var(--color-bg-soft);
+  background: var(--color-bg-soft);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-md);
 }
 
-.access-map__controls {
-  position: absolute;
-  top: var(--space-4);
-  left: var(--space-4);
-  display: grid;
-  overflow: hidden;
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-}
-
-.access-map__controls span {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-bottom: 1px solid var(--color-border-light);
-  font-weight: 700;
-}
-
-.access-map__controls span:last-child {
-  border-bottom: 0;
-}
-
-.access-map__pin {
-  position: absolute;
-  top: 43%;
-  left: 52%;
-  width: 38px;
-  height: 38px;
-  background-color: var(--color-primary);
-  border: 6px solid var(--color-bg-white);
-  border-radius: 50% 50% 50% 0;
-  box-shadow: var(--shadow-lg);
-  transform: rotate(-45deg);
-}
-
-.access-map__label,
-.access-map__station,
-.access-map__credit {
-  position: absolute;
-  display: inline-flex;
-  padding: var(--space-2) var(--space-4);
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-pill);
-  font-size: var(--font-size-xs);
-  box-shadow: var(--shadow-sm);
-}
-
-.access-map__label {
-  top: 31%;
-  left: 43%;
-  color: var(--color-primary-dark);
-  font-weight: 600;
-}
-
-.access-map__station {
-  bottom: 14%;
-  left: 18%;
-  color: var(--color-text-muted);
-}
-
-.access-map__credit {
-  right: var(--space-4);
-  bottom: var(--space-4);
-  color: var(--color-text-light);
-  border-color: var(--color-border-light);
+.access-map__iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
 }
 
 .access-info-card,
@@ -3352,6 +3282,10 @@ table {
 @media (max-width: 767px) {
   .access-map {
     min-height: 300px;
+  }
+
+  .access-map__iframe {
+    height: 300px;
   }
 
   .access-info-card dl div {
