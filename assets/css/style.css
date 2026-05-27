@@ -1489,38 +1489,16 @@ table {
   position: relative;
   min-height: 220px;
   overflow: hidden;
-  background:
-    linear-gradient(35deg, rgba(255, 255, 255, 0.2), rgba(91, 175, 168, 0.12)),
-    repeating-linear-gradient(25deg, transparent 0 34px, rgba(229, 223, 211, 0.8) 35px 37px),
-    repeating-linear-gradient(115deg, transparent 0 42px, rgba(229, 223, 211, 0.7) 43px 45px),
-    var(--color-primary-pale);
+  background: var(--color-primary-pale);
   border-radius: var(--radius-xl);
 }
 
-.home-access__pin,
-.home-access__station {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-2) var(--space-4);
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-sm);
-  font-size: var(--font-size-xs);
-}
-
-.home-access__pin {
-  top: 32%;
-  right: 18%;
-  color: var(--color-primary-dark);
-}
-
-.home-access__station {
-  right: 32%;
-  bottom: 18%;
-  color: var(--color-text-muted);
+.home-access__map-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border: 0;
 }
 
 .home-access__guide {
