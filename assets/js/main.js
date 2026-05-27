@@ -88,3 +88,15 @@
     form.reset();
   });
 })();
+
+(() => {
+  const startYear = 2025;
+  const currentYear = new Date().getFullYear();
+
+  document.querySelectorAll("[data-copyright-range]").forEach((element) => {
+    const elementStart = Number.parseInt(element.dataset.copyrightStart, 10);
+    const fromYear = Number.isNaN(elementStart) ? startYear : elementStart;
+    element.textContent =
+      currentYear <= fromYear ? String(fromYear) : `${fromYear}〜${currentYear}`;
+  });
+})();

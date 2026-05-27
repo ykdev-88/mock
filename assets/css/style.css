@@ -364,8 +364,9 @@ table {
 
 .site-header .site-logo--image {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
-  max-width: min(48vw, 320px);
+  max-width: min(40vw, 260px);
 }
 
 .site-logo__image {
@@ -410,8 +411,9 @@ table {
 
 .global-nav__list {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: var(--space-6);
+  gap: clamp(var(--space-3), 1.1vw, var(--space-5));
 }
 
 .global-nav__link,
@@ -421,9 +423,10 @@ table {
   align-items: center;
   min-height: 44px;
   color: var(--color-text-main);
-  font-size: 0.9375rem;
+  font-size: clamp(0.8125rem, 0.9vw, 0.875rem);
   font-weight: 500;
-  letter-spacing: var(--tracking-normal);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .global-nav__link::after,
@@ -680,10 +683,11 @@ table {
   background-color: var(--color-accent-gold-light);
 }
 
-.divider-leaf {
-  width: 22px;
-  height: 22px;
-  color: var(--color-primary-light);
+.divider-brand-mark {
+  width: auto;
+  height: 36px;
+  max-width: 56px;
+  object-fit: contain;
 }
 
 .section-heading--left {
@@ -1143,10 +1147,35 @@ table {
 @media (min-width: 1024px) {
   .global-nav {
     display: block;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .site-header__inner {
+    gap: var(--space-3);
+  }
+
+  .site-header .site-logo--image {
+    max-width: min(34vw, 240px);
+  }
+
+  .global-nav__list {
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
+  .global-nav a {
+    font-size: 0.8125rem;
   }
 
   .site-header__cta {
     display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .site-header__cta .btn {
+    padding-inline: var(--space-4);
+    font-size: 0.8125rem;
   }
 
   .hamburger,
@@ -1196,6 +1225,25 @@ table {
     right: -14px;
     color: var(--color-accent-gold-light);
     content: "→";
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header .site-logo--image {
+    max-width: 280px;
+  }
+
+  .global-nav__list {
+    gap: var(--space-5);
+  }
+
+  .global-nav a {
+    font-size: 0.875rem;
+  }
+
+  .site-header__cta .btn {
+    padding-inline: var(--space-5);
+    font-size: 0.875rem;
   }
 }
 
@@ -1858,14 +1906,19 @@ table {
 
 .space-summary-card,
 .space-equipment-card,
-.space-capacity-card {
+.space-price-card {
   border: 1px solid var(--color-border-light);
   box-shadow: var(--shadow-md);
 }
 
+.space-overview__pair {
+  display: grid;
+  gap: var(--space-5);
+}
+
 .space-summary-card h2,
 .space-equipment-card h2,
-.space-capacity-card h2,
+.space-price-card h2,
 .space-policy h2,
 .space-comfort-card h2 {
   font-family: var(--font-sans-jp);
@@ -1886,8 +1939,7 @@ table {
   margin-top: var(--space-5);
 }
 
-.space-spec-list div,
-.space-capacity-list div {
+.space-spec-list div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1898,15 +1950,13 @@ table {
   border-radius: var(--radius-md);
 }
 
-.space-spec-list dt,
-.space-capacity-list dt {
+.space-spec-list dt {
   color: var(--color-text-heading);
   font-size: var(--font-size-sm);
   font-weight: 500;
 }
 
-.space-spec-list dd,
-.space-capacity-list dd {
+.space-spec-list dd {
   color: var(--color-primary);
   font-weight: 600;
 }
@@ -1938,10 +1988,58 @@ table {
   font-size: var(--font-size-xs);
 }
 
-.space-capacity-list {
-  display: grid;
-  gap: var(--space-3);
+.space-note a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.space-price-item {
   margin-top: var(--space-5);
+  padding: var(--space-5);
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+}
+
+.space-price-item h3 {
+  color: var(--color-text-heading);
+  font-family: var(--font-serif-jp);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.space-price-item p {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.space-price-item strong {
+  display: block;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  color: var(--color-primary-dark);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-serif-jp);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.space-price-item strong span {
+  margin-left: var(--space-2);
+  font-family: var(--font-sans-jp);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+}
+
+.space-price-item small {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
 }
 
 .space-scenes {
@@ -2077,7 +2175,7 @@ table {
   }
 
   .space-overview__grid {
-    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1fr) minmax(260px, 0.85fr);
+    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr);
     align-items: stretch;
   }
 
@@ -2085,12 +2183,17 @@ table {
     grid-row: span 2;
   }
 
-  .space-equipment-card {
-    grid-column: span 1;
+  .space-summary-card,
+  .space-overview__pair {
+    grid-column: 2;
+  }
+
+  .space-overview__pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .space-icon-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .space-scene-grid {
@@ -2120,11 +2223,13 @@ table {
   }
 
   .space-overview__grid {
-    grid-template-columns: 330px minmax(0, 1fr) 260px;
+    grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
   }
+}
 
-  .space-equipment-card {
-    grid-column: span 1;
+@media (min-width: 1200px) {
+  .space-icon-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -3693,6 +3798,30 @@ table {
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   line-height: var(--leading-relaxed);
+}
+
+.profile-info a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.profile-info a:hover {
+  color: var(--color-primary-dark);
+}
+
+.profile-info__note {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-size: var(--font-size-xs);
+}
+
+.about-business-card a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .about-profile-card img {

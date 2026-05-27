@@ -107,6 +107,7 @@
       <nav class="global-nav" aria-label="グローバルナビゲーション">
         <ul class="global-nav__list">
           <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">運営者・概要</a></li>
           <li><a href="space.html" aria-current="page">レンタルスペースゆう</a></li>
           <li><a href="kanpou.html">黄土漢方蒸し</a></li>
           <li><a href="price.html">料金・予約</a></li>
@@ -133,6 +134,7 @@
   <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
     <ul class="mobile-nav__list">
       <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">運営者・概要</a></li>
       <li><a href="space.html" aria-current="page">レンタルスペースゆう</a></li>
       <li><a href="kanpou.html">黄土漢方蒸し</a></li>
       <li><a href="price.html">料金・予約</a></li>
@@ -154,7 +156,7 @@
             <p class="section-heading__en">Rental Space Yuu</p>
             <div class="section-heading__divider" aria-hidden="true">
               <span class="divider-line"></span>
-              <img class="divider-leaf" src="assets/svg/leaf-sprig.svg" alt="">
+              <img class="divider-brand-mark" src="assets/images/kenbi-garden-mark.png" alt="健美ガーデン">
               <span class="divider-line"></span>
             </div>
           </div>
@@ -173,11 +175,15 @@
         <img class="space-overview__image" src="assets/images/room02.jpg" alt="ホワイトボードとモニターを備えたセミナールーム全体の写真">
         <article class="card space-summary-card">
           <h2>セミナールーム概要</h2>
-          <p>大型テーブルとゆったり座れる椅子を備えた、落ち着いた雰囲気のセミナールームです。モニターやホワイトボードを活用しながら、講座・研修・ワークショップ・打ち合わせなどに集中してご利用いただけます。</p>
+          <p>大型テーブルとゆったり座れる椅子を備えた、落ち着いた雰囲気のセミナールームです。モニターやホワイトボードを活用しながら、講座・研修・ワークショップ・打ち合わせなどに集中してご利用いただけます。最大30名までご利用可能です。</p>
           <dl class="space-spec-list">
             <div>
               <dt>広さ</dt>
               <dd>約48㎡（約29畳）</dd>
+            </div>
+            <div>
+              <dt>収容人数</dt>
+              <dd>最大30名まで</dd>
             </div>
             <div>
               <dt>天井高</dt>
@@ -185,41 +191,31 @@
             </div>
           </dl>
         </article>
-        <article class="card space-equipment-card">
-          <h2>設備・備品</h2>
-          <ul class="space-icon-grid">
-            <li>Wi-Fi</li>
-            <li>プロジェクター</li>
-            <li>ホワイトボード</li>
-            <li>テーブル</li>
-            <li>椅子</li>
-            <li>電源</li>
-            <li>冷暖房</li>
-          </ul>
-          <p class="space-note">※その他ご希望の備品がございましたら、お気軽にお問い合わせください。</p>
-        </article>
-        <article class="card space-capacity-card">
-          <h2>レイアウト別 収容人数（目安）</h2>
-          <dl class="space-capacity-list">
-            <div>
-              <dt>スクール形式</dt>
-              <dd>〜30名</dd>
-            </div>
-            <div>
-              <dt>シアター形式</dt>
-              <dd>〜45名</dd>
-            </div>
-            <div>
-              <dt>口の字形式</dt>
-              <dd>〜20名</dd>
-            </div>
-            <div>
-              <dt>グループ形式</dt>
-              <dd>〜24名</dd>
-            </div>
-          </dl>
-          <p class="space-note">※机・椅子の配置により前後します。</p>
-        </article>
+        <div class="space-overview__pair">
+          <article class="card space-equipment-card">
+            <h2>設備・備品</h2>
+            <ul class="space-icon-grid">
+              <li>Wi-Fi</li>
+              <li>プロジェクター</li>
+              <li>ホワイトボード</li>
+              <li>テーブル</li>
+              <li>椅子</li>
+              <li>電源</li>
+              <li>冷暖房</li>
+            </ul>
+            <p class="space-note">※その他ご希望の備品がございましたら、お気軽にお問い合わせください。</p>
+          </article>
+          <article class="card space-price-card">
+            <h2>料金</h2>
+            <article class="space-price-item">
+              <h3>平日 9:00〜18:00</h3>
+              <p>1時間あたり</p>
+              <strong>¥1,100<span>（税込）</span></strong>
+              <small>延長30分ごと ¥550</small>
+            </article>
+            <p class="space-note">※ご利用は1時間から、30分単位で延長できます。<a href="price.html">料金・予約</a>ページもご確認ください。</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -450,14 +446,14 @@
     <div class="site-footer__inner">
       <div class="site-footer__brand">
         <a href="index.html" class="site-logo" aria-label="ゆうダイモニア名古屋西店 ホーム">
-          <img class="site-logo__mark site-logo__mark--image" src="assets/images/footer-logo-icon.png" alt="" aria-hidden="true">
+          <img class="site-logo__mark site-logo__mark--image" src="assets/images/kenbi-garden-mark.png" alt="健美ガーデン" width="40" height="40">
           <span class="site-logo__name-jp">ゆうダイモニア名古屋西店</span>
           <span class="site-logo__name-en">Yu Daimonia Nagoya-Nishi</span>
         </a>
         <p class="site-footer__tagline">古代ギリシャ語「ダイモニア（幸福）」の名のもと、あなたの真の輝きを引き出す場所です。</p>
       </div>
       <div class="site-footer__bottom">
-        <p>© 2025 ゆうダイモニア名古屋西店 All Rights Reserved.</p>
+        <p>© <span data-copyright-range data-copyright-start="2025">2025</span> ゆうダイモニア名古屋西店 All Rights Reserved.</p>
       </div>
     </div>
   </footer>
