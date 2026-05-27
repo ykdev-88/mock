@@ -1,0 +1,36 @@
+# robots.txt for ゆうダイモニア名古屋西店
+# TODO: 本番ドメイン確定後に example.com を差し替え
+
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+Sitemap: https://example.com/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: bingbot
+Allow: /
