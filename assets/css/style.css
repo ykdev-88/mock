@@ -3098,7 +3098,7 @@ table {
 
 .access-map {
   position: relative;
-  min-height: 360px;
+  min-height: clamp(300px, 45vw, 360px);
   overflow: hidden;
   background: var(--color-bg-soft);
   border: 1px solid var(--color-border);
@@ -3109,7 +3109,7 @@ table {
 .access-map__iframe {
   display: block;
   width: 100%;
-  height: 360px;
+  height: clamp(300px, 45vw, 360px);
   border: 0;
 }
 
@@ -3280,14 +3280,6 @@ table {
 }
 
 @media (max-width: 767px) {
-  .access-map {
-    min-height: 300px;
-  }
-
-  .access-map__iframe {
-    height: 300px;
-  }
-
   .access-info-card dl div {
     grid-template-columns: 1fr;
     gap: var(--space-1);
