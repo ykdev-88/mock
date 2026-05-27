@@ -733,7 +733,8 @@ table {
   border-radius: 50%;
 }
 
-.feature-card__icon svg {
+.feature-card__icon svg,
+.feature-card__icon img {
   width: 32px;
   height: 32px;
 }
@@ -1261,6 +1262,13 @@ table {
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.16em;
+  line-break: strict;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.home-hero__title-line {
+  display: inline-block;
 }
 
 .home-hero__lead {
@@ -1446,7 +1454,7 @@ table {
 
 .home-service-card {
   display: grid;
-  grid-template-columns: 46% 1fr;
+  grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
   min-height: 260px;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
@@ -1469,6 +1477,9 @@ table {
   color: var(--color-primary);
   font-family: var(--font-serif-jp);
   font-size: clamp(var(--font-size-xl), 2.2vw, var(--font-size-2xl));
+  line-height: 1.5;
+  line-break: strict;
+  word-break: keep-all;
 }
 
 .home-service-card .card__text {
@@ -1659,6 +1670,12 @@ table {
   transform: scaleX(-1);
 }
 
+@media (min-width: 480px) {
+  .home-hero__title-line {
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 768px) {
   .home-hero,
   .home-hero__inner {
@@ -1751,7 +1768,12 @@ table {
   }
 
   .home-hero__title {
-    letter-spacing: var(--tracking-wide);
+    font-size: clamp(1.625rem, 7vw, 2.125rem);
+    letter-spacing: 0.06em;
+  }
+
+  .home-hero__title-line {
+    max-width: 100%;
   }
 
   .home-service-card {
@@ -3148,7 +3170,7 @@ table {
 
 .access-main,
 .access-routes,
-.access-parking,
+.access-entrance-block,
 .access-cta {
   padding-block: var(--space-8);
   background-color: var(--color-bg-base);
@@ -3180,9 +3202,7 @@ table {
   border: 0;
 }
 
-.access-info-card,
-.access-parking-card,
-.access-entrance {
+.access-info-card {
   padding: var(--space-6);
   background-color: var(--color-bg-white);
   border: 1px solid var(--color-border-light);
@@ -3190,8 +3210,7 @@ table {
   box-shadow: var(--shadow-md);
 }
 
-.access-info-card h2,
-.access-parking-card h2 {
+.access-info-card h2 {
   font-family: var(--font-sans-jp);
   font-size: var(--font-size-lg);
   font-weight: 600;
@@ -3235,47 +3254,30 @@ table {
 
 .access-route-card .feature-card__icon {
   color: var(--color-primary-dark);
-  font-weight: 700;
 }
 
-.access-parking {
+.access-entrance-block {
   padding-top: 0;
 }
 
-.access-parking__grid {
-  display: grid;
-  gap: var(--space-6);
-}
-
-.access-parking-card {
-  background-color: var(--color-primary-pale);
-  border-color: var(--color-border-primary);
-}
-
-.access-parking-card h3 {
-  margin-top: var(--space-4);
-  color: var(--color-primary-dark);
-  font-family: var(--font-sans-jp);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-}
-
-.access-parking-card p:last-child {
-  margin-top: var(--space-4);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+.access-entrance-block__inner {
+  width: min(100%, 720px);
+  margin-inline: auto;
 }
 
 .access-entrance {
   position: relative;
   overflow: hidden;
-  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
 }
 
 .access-entrance img {
+  display: block;
   width: 100%;
-  height: 100%;
-  min-height: 240px;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
@@ -3326,11 +3328,6 @@ table {
 
   .access-route-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .access-parking__grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
-    align-items: stretch;
   }
 
   .access-cta__inner {
