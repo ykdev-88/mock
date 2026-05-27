@@ -1968,26 +1968,45 @@ table {
   margin-top: var(--space-5);
 }
 
-.space-icon-grid li {
+.space-equipment-item {
   display: grid;
+  gap: var(--space-2);
   place-items: center;
-  gap: var(--space-1);
-  min-height: 74px;
-  padding: var(--space-3);
-  color: var(--color-text-heading);
+  min-height: 108px;
+  padding: var(--space-4) var(--space-3);
   background-color: var(--color-bg-soft);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  line-height: var(--leading-snug);
   text-align: center;
 }
 
-.space-icon-grid li small {
-  display: block;
-  color: var(--color-text-muted);
+.space-equipment-item__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  color: var(--color-primary);
+  background-color: var(--color-primary-pale);
+  border-radius: 50%;
+}
+
+.space-equipment-item__icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.space-equipment-item__label {
+  color: var(--color-text-heading);
   font-size: var(--font-size-xs);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+}
+
+.space-equipment-item__label small {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: 0.6875rem;
   font-weight: 400;
 }
 
