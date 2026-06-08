@@ -1534,23 +1534,29 @@ table {
 
 .home-service-card {
   display: grid;
-  grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
-  min-height: 260px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  min-height: 0;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
 }
 
 .home-service-card .image-card__image {
-  height: 100%;
-  min-height: 260px;
-  aspect-ratio: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .home-service-card .image-card__body {
   display: grid;
-  align-content: center;
+  align-content: start;
   gap: var(--space-4);
-  padding: var(--space-8);
+  padding: var(--space-6);
+  text-align: center;
+  background-color: var(--color-bg-white);
 }
 
 .home-service-card .card__title {
@@ -1569,7 +1575,31 @@ table {
 }
 
 .home-service-card .btn {
-  justify-self: start;
+  justify-self: center;
+}
+
+@media (min-width: 768px) {
+  .home-service-card {
+    grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+    grid-template-rows: auto;
+    min-height: 260px;
+  }
+
+  .home-service-card .image-card__image {
+    height: 100%;
+    min-height: 260px;
+    aspect-ratio: auto;
+  }
+
+  .home-service-card .image-card__body {
+    align-content: center;
+    padding: var(--space-8);
+    text-align: left;
+  }
+
+  .home-service-card .btn {
+    justify-self: start;
+  }
 }
 
 .home-scene__content {
@@ -1846,15 +1876,15 @@ table {
   }
 
   .home-scene__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .home-scene-item {
-    min-height: 140px;
+    min-height: 150px;
   }
 
   .home-scene-item img {
-    min-height: 140px;
+    min-height: 150px;
   }
 
   .home-scene-item span {
@@ -1886,14 +1916,6 @@ table {
 
   .home-hero__title-line {
     max-width: 100%;
-  }
-
-  .home-service-card {
-    grid-template-columns: 1fr;
-  }
-
-  .home-service-card .image-card__image {
-    min-height: 180px;
   }
 
   .home-concept {
@@ -2313,6 +2335,20 @@ table {
   margin-top: var(--space-4);
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
+}
+
+.space-comfort-card ul {
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-3);
+  padding-left: 1.25em;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  list-style: disc;
+}
+
+.space-comfort-card li + li {
+  margin-top: var(--space-2);
 }
 
 .space-final-cta {
